@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,19 +10,20 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ssh_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ssh/ssh_{{ version }}.tar.gz
-  sha256: 02801b8005583b038b38c99f90aeaeee214bb6f02b7e34c1824dde8804d34a93
+  sha256: eac64eb6aefe8a75d7fd50684e76a70732521cdb4451e031bdc33392e6649820
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  skip: true              # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}              # [not win]
-    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('c') }}          # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -52,7 +53,9 @@ test:
     - "\"%R%\" -e \"library('ssh')\""  # [win]
 
 about:
-  home: https://docs.ropensci.org/ssh (website), https://github.com/ropensci/ssh (devel)
+  home: https://ropensci.r-universe.dev/ssh
+  dev_url: https://github.com/ropensci/ssh
+  doc_url: https://docs.ropensci.org/ssh
   license: MIT
   summary: Connect to a remote server over SSH to transfer files via SCP, setup a secure tunnel, or run a command or script on the host while streaming stdout and stderr directly to the client.
   license_family: MIT
@@ -64,25 +67,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - lc5415
-
-# Package: ssh
-# Type: Package
-# Title: Secure Shell (SSH) Client for R
-# Version: 0.7.0
-# Authors@R: person("Jeroen", "Ooms", role = c("aut", "cre"), email = "jeroen@berkeley.edu", comment = c(ORCID = "0000-0002-4035-0289"))
-# Description: Connect to a remote server over SSH to transfer files via SCP, setup a secure tunnel, or run a command or script on the host while streaming stdout and stderr directly to the client.
-# License: MIT + file LICENSE
-# Encoding: UTF-8
-# SystemRequirements: libssh >= 0.6.0 (the original, not libssh2)
-# RoxygenNote: 7.1.1
-# Imports: credentials, askpass
-# Suggests: knitr, rmarkdown, spelling, sys, testthat, mongolite
-# Language: en-GB
-# URL: https://docs.ropensci.org/ssh (website), https://github.com/ropensci/ssh (devel)
-# VignetteBuilder: knitr
-# NeedsCompilation: yes
-# Packaged: 2020-07-21 09:10:26 UTC; jeroen
-# Author: Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>)
-# Maintainer: Jeroen Ooms <jeroen@berkeley.edu>
-# Repository: CRAN
-# Date/Publication: 2020-07-21 09:30:02 UTC
