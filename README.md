@@ -3,22 +3,32 @@ About r-ssh-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ssh-feedstock/blob/main/LICENSE.txt)
 
+
 About r-ssh
 -----------
 
-Home: https://docs.ropensci.org/ssh (website), https://github.com/ropensci/ssh (devel)
+Home: https://ropensci.r-universe.dev/ssh
 
 Package license: MIT
 
 Summary: Connect to a remote server over SSH to transfer files via SCP, setup a secure tunnel, or run a command or script on the host while streaming stdout and stderr directly to the client.
+
+Development: https://github.com/ropensci/ssh
+
+Documentation: https://docs.ropensci.org/ssh
+
 About r-ssh
 -----------
 
-Home: https://docs.ropensci.org/ssh (website), https://github.com/ropensci/ssh (devel)
+Home: https://ropensci.r-universe.dev/ssh
 
 Package license: MIT
 
 Summary: Connect to a remote server over SSH to transfer files via SCP, setup a secure tunnel, or run a command or script on the host while streaming stdout and stderr directly to the client.
+
+Development: https://github.com/ropensci/ssh
+
+Documentation: https://docs.ropensci.org/ssh
 
 Current build status
 ====================
@@ -63,13 +73,6 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10313&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ssh-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_r_base4.3" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=10313&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-ssh-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
