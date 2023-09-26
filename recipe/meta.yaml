@@ -1,4 +1,4 @@
-{% set version = "0.8.3" %}
+{% set version = "0.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ssh_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ssh/ssh_{{ version }}.tar.gz
-  sha256: eac64eb6aefe8a75d7fd50684e76a70732521cdb4451e031bdc33392e6649820
+  sha256: 401899aaae1aa73c40c4b54920d6ed693362dbd9a5bde29caacca0ec3e80c7d4
 
 build:
   merge_build_host: true  # [win]
-  skip: true              # [win]
+  skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
