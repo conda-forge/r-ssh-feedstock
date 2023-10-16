@@ -1,4 +1,4 @@
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ssh_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ssh/ssh_{{ version }}.tar.gz
-  sha256: 401899aaae1aa73c40c4b54920d6ed693362dbd9a5bde29caacca0ec3e80c7d4
+  sha256: d0582ee9fda107ef51b5539c61bf1145efe69d0c92ac608579477e13fcae69c9
 
 build:
   merge_build_host: true  # [win]
