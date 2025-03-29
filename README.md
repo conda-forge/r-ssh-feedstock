@@ -219,5 +219,4 @@ Feedstock Maintainers
 =====================
 
 * [@conda-forge/r](https://github.com/orgs/conda-forge/teams/r/)
-* [@lc5415](https://github.com/lc5415/)
 
