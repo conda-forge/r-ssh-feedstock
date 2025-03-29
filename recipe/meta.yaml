@@ -12,8 +12,6 @@ source:
   sha256: 2c3791738c7860f82d9e546c917ab89401130988e2ec3f491c518faa6fc3d434
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -66,4 +64,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - lc5415
